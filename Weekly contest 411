@@ -1,3 +1,5 @@
+1)Count Substring That Satisfy k-Constraint I
+
 class Solution {
     public int countKConstraintSubstrings(String s, int k) {
         
