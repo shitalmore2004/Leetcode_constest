@@ -1,0 +1,20 @@
+1)Convert date to binary
+class Solution {
+    public String convertDateToBinary(String date) {
+        
+         String[] parts = date.split("-");
+       
+        
+        int year = Integer.parseInt(parts[0]);
+        int month = Integer.parseInt(parts[1]);
+        int day = Integer.parseInt(parts[2]);
+        
+        String binary_year=Integer.toBinaryString(year);
+         String binary_month=Integer.toBinaryString(month);
+         String binary_day=Integer.toBinaryString(day);
+        
+        
+        
+        return  binary_year+"-"+binary_month+"-"+binary_day;
+    }
+}
