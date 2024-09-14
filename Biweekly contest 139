@@ -1,0 +1,15 @@
+1) 3285 -Find Indices Of stable mountains
+
+
+class Solution {
+    public List<Integer> stableMountains(int[] height, int threshold) {
+        
+        List <Integer> stableidx = new ArrayList <>();
+        for(int i=1;i<height.length;i++){
+            if(height[i-1]>threshold){
+                stableidx.add(i);
+            }
+        }
+        return stableidx;
+    }
+}
