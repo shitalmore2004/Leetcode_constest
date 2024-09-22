@@ -1,0 +1,22 @@
+1)100400. Report Spam Message
+
+code:
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class Solution {
+    public boolean reportSpam(String[] message, String[] bannedWords) {
+        HashSet<String> newword=new HashSet<>();
+        for(String word:bannedWords){
+            newword.add(word);
+        }
+        int count =0;
+        for(String msgword:message){
+            if(newword.contains(msgword)){
+               count++;
+                if(count >=2){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+}
